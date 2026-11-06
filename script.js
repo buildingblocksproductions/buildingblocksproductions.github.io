@@ -17,7 +17,17 @@
   var menuBtn = document.getElementById('menu-btn');
 
   function show(){
-    var h = (location.hash || '').replace('#','');
+    var raw = (location.hash || '').replace('#','').split('?');
+    var h = raw[0];
+    var qs = new URLSearchParams(raw[1] || '');
+    var topic = qs.get('topic');
+    var sel = document.getElementById('c-topic'), msg = document.getElementById('c-msg');
+    if (h === 'contact' && sel && msg) {
+      if (topic) { sel.value = topic; }
+      var pre = qs.get('msg');
+      if (pre && (!msg.value || msg.getAttribute('data-auto'))) { msg.value = pre; msg.setAttribute('data-auto','1'); }
+      if (!topic && !pre && msg.getAttribute('data-auto')) { msg.value = ''; msg.removeAttribute('data-auto'); sel.value = 'General'; }
+    }
     if (names.indexOf(h) === -1) h = 'home';
     views.forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view') === h); });
     var active = section[h] || h;
@@ -30,6 +40,8 @@
     menuBtn.setAttribute('aria-expanded','false');
     window.scrollTo(0,0);
   }
+  var cm = document.getElementById('c-msg');
+  if (cm) cm.addEventListener('input', function(){ cm.removeAttribute('data-auto'); });
   window.addEventListener('hashchange', show);
   show();
 
