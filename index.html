@@ -1,31 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Building Blocks Productions | Coming Soon</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building Blocks Productions</title>
+<meta name="description" content="Building Blocks Productions is an independent narrative film company developing, financing and producing elevated genre and drama features.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="text-white d-flex align-items-center justify-content-center vh-100">
-    <div class="text-center">
-        <img src="BBLogoNavy%20and%20Yellow.png" alt="Building Blocks Productions Logo" class="img-fluid mb-4" style="max-width:400px;">
-        <h1 class="display-5">COMING SOON</h1>
-        <p class="lead">We're building something great.</p>
+<body>
+<a class="skip" href="#home">Skip to content</a>
 
-        <div class="mt-4" style="display:none;">
-            <form action="#" method="post" class="d-flex justify-content-center gap-2">
-                <input type="email" class="form-control w-auto" placeholder="Enter your email">
-                <button type="submit" class="btn btn-warning">Submit</button>
-            </form>
-        </div>
-
-        <div class="mt-4" style="display:none;">
-            <a href="#" class="text-decoration-none text-warning mx-2">Facebook</a>
-            <a href="#" class="text-decoration-none text-warning mx-2">Instagram</a>
-            <a href="#" class="text-decoration-none text-warning mx-2">Twitter</a>
-            <a href="#" class="text-decoration-none text-warning mx-2">YouTube</a>
-        </div>
+<header class="site" id="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#home" aria-label="Building Blocks Productions, home">
+        <span class="blocks" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        BUILDING BLOCKS
+      </a>
+      <nav class="primary" aria-label="Primary" id="primary-nav">
+        <a href="#films" data-nav="films">Films</a>
+        <a href="#company" data-nav="company">Company</a>
+        <a href="#press" data-nav="press">Press</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <a class="btn-line" href="#industry" data-nav="industry">INDUSTRY / SCREENERS</a>
+      <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="primary-nav">MENU</button>
     </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<div data-view="home">
+  <section class="hero art wrap" style="--tone:#0B1430" aria-label="Featured film">
+    <img class="fill" src="img/road-to-recovery-poster.jpg" alt="" aria-hidden="true" style="object-position:50% 54%">
+    <p class="mono kicker">Written &amp; directed by Scout Taylor-Compton</p>
+    <h1>Road to<br>Recovery</h1>
+    <p class="lede">Starring Ryan Kiera Armstrong and Freddie Prinze Jr.</p>
+    <div class="row">
+      <a class="btn solid" href="#road-to-recovery">About the Film</a>
+      <a class="btn" href="#industry">Request Screener</a>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Company statement">
+    <div class="split">
+      <h2 class="h-xl">Emotionally driven, character-centered films.</h2>
+      <div class="body">
+        <p>Building Blocks Productions is the independent banner of writer-director Scout Taylor-Compton and producer Tom O’Connell, developing and producing drama and elevated genre features.</p>
+        <a class="mono" href="#company" style="color:var(--signal)">The company →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="The slate">
+    <div class="headrow">
+      <h2 class="label">The Slate</h2>
+      <a class="mono" href="#films" style="color:var(--dim)">All films →</a>
+    </div>
+    <div class="posters">
+      <a class="poster" href="#road-to-recovery">
+        <div class="art" style="--tone:#0B1430"><img class="fill" src="img/road-to-recovery-poster.jpg" alt="Road to Recovery one-sheet"></div>
+        <span class="t">Road to Recovery</span>
+        <span class="mono status done">Complete · Festivals 2027</span>
+      </a>
+      <a class="poster" href="#building-blocks">
+        <div class="art" style="--tone:#0B0D1A"><img class="fill" src="img/building-blocks-poster.jpg" alt="Building Blocks one-sheet"></div>
+        <span class="t">Building Blocks</span>
+        <span class="mono status">Short film · Drama</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Survive: The Game">
+    <div class="l">
+      <p class="mono status live">In production · Supernatural horror</p>
+      <h2 class="h-lg">Survive: The Game</h2>
+    </div>
+    <div class="r">
+      <p class="body">When a group of friends unearth an ancient board game inside a secluded cabin with a violent past, each roll of the dice brings a deadly fate to life. The only way to survive is to finish the game.</p>
+      <div class="row">
+        <a class="btn solid" href="#survive">About the Film</a>
+        <a class="btn" href="#press">Latest News</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap quote" aria-label="Press">
+    <p class="q">“[Pull quote from a review or festival programmer.]”</p>
+    <p class="mono src">[Outlet] · [Film title]</p>
+  </section>
+
+  <section class="block wrap" aria-label="Newsletter">
+    <div class="split" style="align-items:end">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h2 class="h-lg">Dispatches from set.</h2>
+        <p class="body">Trailers, festival news and release dates. A few emails a year.</p>
+      </div>
+      <form class="inline-form js-form" aria-label="Newsletter signup" data-note="note-news">
+        <label for="news-email" class="skip">Email address</label>
+        <input id="news-email" type="email" required placeholder="Email address" autocomplete="email">
+        <button class="btn solid" type="submit">Sign up</button>
+      </form>
+    </div>
+    <p class="form-note" id="note-news" role="status" style="margin-top:14px"></p>
+  </section>
+</div>
+
+<!-- ============ FILMS ============ -->
+<div data-view="films">
+  <section class="pagehead wrap">
+    <h1>Films</h1>
+    <p>Features in release, in production and in development.</p>
+  </section>
+
+  <section class="block wrap" aria-label="Released and in production">
+    <div class="headrow"><h2 class="label">Slate</h2></div>
+    <div class="posters">
+      <a class="poster" href="#road-to-recovery">
+        <div class="art" style="--tone:#0B1430"><img class="fill" src="img/road-to-recovery-poster.jpg" alt="Road to Recovery one-sheet"></div>
+        <span class="t">Road to Recovery</span>
+        <span class="mono status done">Complete · Festivals 2027</span>
+      </a>
+      <a class="poster" href="#building-blocks">
+        <div class="art" style="--tone:#0B0D1A"><img class="fill" src="img/building-blocks-poster.jpg" alt="Building Blocks one-sheet"></div>
+        <span class="t">Building Blocks</span>
+        <span class="mono status">Short film · Drama</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="In production">
+    <div class="l">
+      <p class="mono status live">In production · 2027</p>
+      <h2 class="h-lg">Survive: The Game</h2>
+    </div>
+    <div class="r">
+      <p class="body">Supernatural horror from writer-director Scout Taylor-Compton, starring Olivia Holt, Jaimie Alexander and Rohan Campbell.</p>
+      <div class="row"><a class="btn solid" href="#survive">About the Film</a></div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="In development">
+    <div class="headrow"><h2 class="label">In Development</h2></div>
+    <div class="list">
+      <div>
+        <span class="mono d">Feature</span>
+        <span class="ttl">Survive: Chapter II</span>
+        <span class="mono status">Development</span>
+      </div>
+      <div>
+        <span class="mono d">Feature</span>
+        <span class="ttl">Survive: Chapter III</span>
+        <span class="mono status">Development</span>
+      </div>
+      <div>
+        <span class="mono d">Original</span>
+        <span class="ttl">One More Day <span style="display:block;font-size:15px;font-weight:500;color:var(--muted);margin-top:6px">Written by Tom O’Connell</span></span>
+        <span class="mono status">Development</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ SURVIVE ============ -->
+<div data-view="survive">
+  <section class="hero art noart wrap" style="--tone:#1A0B0B" aria-label="Survive: The Game">
+    <a class="back mono" href="#films">← All films</a>
+    <p class="mono kicker">In production · Supernatural horror</p>
+    <h1>Survive:<br>The Game</h1>
+    <p class="lede">When a group of friends unearth an ancient board game inside a secluded cabin with a violent past, each roll of the dice brings a deadly fate to life. The only way to survive is to finish the game.</p>
+    <div class="row">
+      <a class="btn solid" href="#press">Press</a>
+      <a class="btn" href="#industry">Sales Inquiries</a>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Film facts">
+    <dl class="facts">
+      <div><dt class="mono">Status</dt><dd>Principal photography</dd></div>
+      <div><dt class="mono">Location</dt><dd>Gipuzkoa, Basque Country</dd></div>
+      <div><dt class="mono">Genre</dt><dd>Supernatural horror</dd></div>
+      <div><dt class="mono">Release</dt><dd>2027</dd></div>
+    </dl>
+  </section>
+
+  <section class="block wrap" aria-label="Cast and crew">
+    <div class="headrow"><h2 class="label">Cast</h2></div>
+    <div class="credits">
+      <div class="stack"><span class="mono role">Starring</span><span class="name">Olivia Holt</span><span class="name">Jaimie Alexander</span><span class="name">Rohan Campbell</span><span class="name">Isabella Pappas</span><span class="name">Heidi Berger</span><span class="name">Nico Greetham</span></div>
+    </div>
+    <div class="headrow" style="margin-top:96px"><h2 class="label">Filmmakers</h2></div>
+    <div class="credits">
+      <div><span class="mono role">Directed by</span><span class="name">Scout Taylor-Compton</span></div>
+      <div class="stack"><span class="mono role">Written by</span><span class="name">Scout Taylor-Compton</span><span class="name">Michael Kennedy</span></div>
+      <div class="stack"><span class="mono role">Produced by</span><span class="name">Tom O’Connell</span><span class="name">Scout Taylor-Compton</span><span class="name">Randy Wayne</span><span class="name">Talia Bella</span><span class="name">Amy Covell</span></div>
+      <div class="co"><span class="mono role">Production companies</span><span class="name">Building Blocks Productions</span><span class="name">Rebellium Films</span><span class="name">Red Phoenix Productions</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ROAD TO RECOVERY ============ -->
+<div data-view="road-to-recovery">
+  <section class="hero art wrap" style="--tone:#0B1430" aria-label="Road to Recovery">
+    <img class="fill" src="img/road-to-recovery-poster.jpg" alt="" aria-hidden="true">
+    <a class="back mono" href="#films">← All films</a>
+    <p class="mono kicker" style="color:var(--paper)">Complete · Festivals 2027</p>
+    <h1>Road to<br>Recovery</h1>
+    <p class="lede">When you can’t change the destination, you change the journey.</p>
+    <div class="row">
+      <a class="btn solid" href="#industry">Request Screener</a>
+      <a class="btn" href="#press">Press</a>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Film facts">
+    <dl class="facts">
+      <div><dt class="mono">Running time</dt><dd>118 min</dd></div>
+      <div><dt class="mono">Genre</dt><dd>Drama</dd></div>
+      <div><dt class="mono">Rights</dt><dd>Worldwide available</dd></div>
+      <div><dt class="mono">Director</dt><dd>Scout Taylor-Compton</dd></div>
+    </dl>
+  </section>
+
+  <section class="block wrap" aria-label="Synopsis">
+    <div class="split">
+      <img src="img/road-to-recovery-poster.jpg" alt="Road to Recovery one-sheet: a young girl with an oxygen cannula gazing up at a starry sky" style="width:100%;max-width:420px;height:auto;display:block">
+      <div class="body">
+        <h2 class="label" style="color:var(--paper)">Synopsis</h2>
+        <p>A father and his terminally ill daughter set out on a cross-country trip to find the boy she loves. Along the way, they have to face their shared grief and work out what it means to hold on and to let go.</p>
+        <p>Written and directed by Scout Taylor-Compton, inspired by a loss of her own. Filmed in Tulsa, Oklahoma. The first feature from Building Blocks Productions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Credits">
+    <div class="headrow"><h2 class="label">Filmmakers</h2></div>
+    <div class="credits">
+      <div><span class="mono role">Written &amp; directed by</span><span class="name">Scout Taylor-Compton</span></div>
+      <div class="stack"><span class="mono role">Produced by</span><span class="name">Amy Covell</span><span class="name">Tom O’Connell</span></div>
+      <div class="stack"><span class="mono role">Co-produced by</span><span class="name">Talia Bella</span><span class="name">Randy Wayne</span></div>
+      <div class="stack"><span class="mono role">Co-executive producers</span><span class="name">Michelle Sommer</span><span class="name">Edward D.A. Sommer</span><span class="name">Scout Taylor-Compton</span></div>
+      <div class="co"><span class="mono role">Production companies</span><span class="name">Building Blocks Productions</span><span class="name">Red Phoenix Productions</span><span class="name">Dauntless Productions</span><span class="name">Rebellium Films</span></div>
+      <div><span class="mono role">Director of photography</span><span class="name">Andy Patch</span></div>
+      <div><span class="mono role">Edited by</span><span class="name">Austin Nordell</span></div>
+      <div><span class="mono role">Music by</span><span class="name">Michael Drew</span></div>
+      <div><span class="mono role">Casting by</span><span class="name">Shannon Makhanian</span></div>
+    </div>
+    <div class="headrow" style="margin-top:96px"><h2 class="label">Cast</h2></div>
+    <div class="credits">
+      <div class="stack"><span class="mono role">Starring</span><span class="name">Ryan Kiera Armstrong</span><span class="name">Freddie Prinze Jr.</span></div>
+      <div class="stack"><span class="mono role">Cast</span><span class="name">Cameron Crovetti</span><span class="name">Thomas Lennon</span><span class="name">Marley Shelton</span></div>
+      <div><span class="mono role">And</span><span class="name">Sarah Shahi</span></div>
+      <div class="stack"><span class="mono role">Cast</span><span class="name">Tyler Mane</span><span class="name">Clint Howard</span><span class="name">Cerina Vincent</span></div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Stills">
+    <div class="headrow"><h2 class="label">Stills</h2></div>
+    <div class="stills">
+      <div class="art" style="--tone:#121C22"><span class="tag">[STILL 01]</span></div>
+      <div class="art" style="--tone:#16232B"><span class="tag">[STILL 02]</span></div>
+      <div class="art" style="--tone:#0E171C"><span class="tag">[STILL 03]</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUILDING BLOCKS (SHORT) ============ -->
+<div data-view="building-blocks">
+  <section class="hero art wrap" style="--tone:#0B0D1A" aria-label="Building Blocks">
+    <img class="fill" src="img/building-blocks-poster.jpg" alt="" aria-hidden="true">
+    <a class="back mono" href="#films">← All films</a>
+    <p class="mono kicker" style="color:var(--paper)">Short film · Drama · 25 min</p>
+    <h1>Building<br>Blocks</h1>
+    <p class="lede">A young woman pieces together her harrowing childhood, marked by her mother’s bipolar disorder, trying to confront the past to reclaim her future.</p>
+    <div class="row">
+      <a class="btn solid" href="#industry">Request Screener</a>
+      <a class="btn" href="#films">All Films</a>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Synopsis">
+    <div class="split">
+      <img src="img/building-blocks-poster.jpg" alt="Building Blocks one-sheet: a young girl lit in blue beneath the title spelled out in toy blocks" style="width:100%;max-width:420px;height:auto;display:block">
+      <div class="body">
+        <h2 class="label" style="color:var(--paper)">Synopsis</h2>
+        <p>A young woman pieces together her harrowing childhood, marked by her mother’s bipolar disorder, trying to confront the past to reclaim her future.</p>
+        <p>Written and directed by Scout Taylor-Compton, who also stars.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Credits">
+    <div class="headrow"><h2 class="label">Cast</h2></div>
+    <div class="credits">
+      <div><span class="mono role">Starring</span><span class="name">Scout Taylor-Compton</span></div>
+      <div class="stack"><span class="mono role">Cast</span><span class="name">Sam Palladio</span><span class="name">Sierra McCormick</span><span class="name">Kynlee Heiman</span></div>
+      <div><span class="mono role">And</span><span class="name">Tammy Townsend</span></div>
+    </div>
+    <div class="headrow" style="margin-top:96px"><h2 class="label">Filmmakers</h2></div>
+    <div class="credits">
+      <div><span class="mono role">Written &amp; directed by</span><span class="name">Scout Taylor-Compton</span></div>
+      <div class="stack"><span class="mono role">Produced by</span><span class="name">Anthony Del Negro</span><span class="name">Owsley Robinson</span></div>
+      <div class="stack"><span class="mono role">Executive producers</span><span class="name">Tom O’Connell</span><span class="name">Scout Taylor-Compton</span><span class="name">Jennifer Kaput</span><span class="name">Zach O’Brien</span><span class="name">Shane O’Brien</span></div>
+      <div><span class="mono role">Director of photography</span><span class="name">Andy Patch</span></div>
+      <div><span class="mono role">Edited by</span><span class="name">Austin Nordell</span></div>
+      <div><span class="mono role">Music by</span><span class="name">John Swihart</span></div>
+      <div><span class="mono role">Production designer</span><span class="name">Charlie Harris</span></div>
+      <div><span class="mono role">Costume designer</span><span class="name">Katie Mamie</span></div>
+      <div class="co"><span class="mono role">Production companies</span><span class="name">Building Blocks Productions</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ COMPANY ============ -->
+<div data-view="company">
+  <section class="pagehead wrap">
+    <h1>Company</h1>
+    <p>An independent production company founded by Scout Taylor-Compton and Tom O’Connell, focused on emotionally driven, character-centered storytelling.</p>
+  </section>
+
+  <section class="block wrap" aria-label="What we do">
+    <div class="pillars">
+      <div><span class="mono n">01</span><h3>Develop</h3><p>Original IP built from the page up, led by distinctive voices in writing and directing.</p></div>
+      <div><span class="mono n">02</span><h3>Finance</h3><p>Independent equity, tax incentives and co-productions structured project by project.</p></div>
+      <div><span class="mono n">03</span><h3>Produce</h3><p>Production in the United States and abroad, from previs through final mix.</p></div>
+      <div><span class="mono n">04</span><h3>Release</h3><p>Festival strategy, international sales and distribution partnerships.</p></div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Team">
+    <div class="headrow"><h2 class="label">Leadership</h2></div>
+    <div class="team">
+      <div class="person">
+        <div class="art" style="--tone:#1A1A1A"><img class="fill" src="img/scout-taylor-compton.jpg" alt="Portrait of Scout Taylor-Compton" style="object-position:50% 30%"></div>
+        <span class="mono" style="color:var(--signal)">Writer · Director · Co-founder</span>
+        <h3>Scout Taylor-Compton</h3>
+        <p>Best known as Laurie Strode in Rob Zombie’s Halloween and Halloween II. She made her feature directing debut with Bring the Law, and wrote and directed Road to Recovery and Survive: The Game.</p>
+      </div>
+      <div class="person">
+        <div class="art" style="--tone:#1A1A1A"><img class="fill" src="img/tom-oconnell.jpg" alt="Portrait of Tom O’Connell" style="object-position:50% 30%"></div>
+        <span class="mono" style="color:var(--signal)">Producer · Writer · Co-founder</span>
+        <h3>Tom O’Connell</h3>
+        <p>Producer of Road to Recovery and Survive: The Game, and writer of One More Day, now in development. Tom also brings a background in stunts and performance on Obi-Wan Kenobi, Ahsoka and The Mandalorian.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Partners">
+    <div class="split">
+      <h2 class="label">Partners</h2>
+      <div class="body">
+        <p>Dauntless Productions · Rebellium Films · Red Phoenix Productions</p>
+        <p>[Sales agents and distributors as they’re confirmed.]</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PRESS ============ -->
+<div data-view="press">
+  <section class="pagehead wrap">
+    <h1>Press</h1>
+    <p>News, press kits and contacts for each film.</p>
+  </section>
+
+  <section class="block wrap" aria-label="News">
+    <div class="headrow"><h2 class="label">News</h2></div>
+    <div class="list">
+      <a href="https://deadline.com/2026/11/isabella-pappas-heidi-berger-nico-greetham-survive-game-1237213152/">
+        <span class="mono d">Nov 2026 · Deadline</span>
+        <span class="ttl">Isabella Pappas, Heidi Berger and Nico Greetham join Olivia Holt, Jaimie Alexander and Rohan Campbell in Survive: The Game</span>
+        <span class="mono" style="color:var(--signal)">Read →</span>
+      </a>
+      <a href="https://bleedingcool.com/movies/survive-the-game-new-thriller-from-scout-taylor-compton-sets-cast/">
+        <span class="mono d">2026 · Bleeding Cool</span>
+        <span class="ttl">Survive: The Game, new thriller from Scout Taylor-Compton, sets its cast</span>
+        <span class="mono" style="color:var(--signal)">Read →</span>
+      </a>
+      <a href="https://deadline.com/2025/10/ryan-kiera-armstrong-freddie-prinze-jr-scout-taylor-compton-1236602728/">
+        <span class="mono d">Oct 2025 · Deadline</span>
+        <span class="ttl">Ryan Kiera Armstrong and Freddie Prinze Jr. to star in Scout Taylor-Compton’s Road to Recovery</span>
+        <span class="mono" style="color:var(--signal)">Read →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Press kits">
+    <div class="headrow"><h2 class="label">Press Kits</h2></div>
+    <div class="table-box">
+      <table>
+        <thead><tr><th scope="col">Film</th><th scope="col">Includes</th><th scope="col">Download</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Survive: The Game</strong></td><td>Logline, synopsis, cast and crew, first-look stills</td><td><a href="#press">[Link after first look]</a></td></tr>
+          <tr><td><strong>Road to Recovery</strong></td><td>EPK, one-sheet, stills, director’s statement</td><td><a href="#press">[EPK link]</a></td></tr>
+          <tr><td><strong>Building Blocks</strong> (short)</td><td>One-sheet, synopsis, stills, credits</td><td><a href="#press">[Link]</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Press contact">
+    <div class="split">
+      <h2 class="h-lg">Press inquiries</h2>
+      <div class="body">
+        <p>For interviews, screeners and image requests.</p>
+        <p style="color:var(--paper);font-size:20px;font-weight:600"><a href="mailto:info@buildingblocksproductions.com">info@buildingblocksproductions.com</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ INDUSTRY ============ -->
+<div data-view="industry">
+  <section class="pagehead wrap">
+    <h1>Industry</h1>
+    <p>For sales agents, distributors and festival programmers: availability, materials and screener requests.</p>
+  </section>
+
+  <section class="block wrap" aria-label="Availability">
+    <div class="headrow"><h2 class="label">Availability</h2></div>
+    <div class="table-box">
+      <table>
+        <thead><tr><th scope="col">Title</th><th scope="col">Status</th><th scope="col">Rights</th><th scope="col">Materials</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Road to Recovery</strong><br>118 min</td><td><span class="mono status done">Complete</span></td><td>Worldwide available</td><td>Screener, one-sheet, sales presentation on request</td></tr>
+          <tr><td><strong>Survive: The Game</strong><br>Supernatural horror</td><td><span class="mono status live">In production</span></td><td>[Sales representation]</td><td>Promo reel after wrap</td></tr>
+          <tr><td><strong>Building Blocks</strong><br>Short · 25 min</td><td><span class="mono status done">Complete</span></td><td>[Festivals / shorts programming]</td><td>Screener on request</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-label="Request a screener">
+    <div class="split">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h2 class="h-lg">Request a screener</h2>
+        <p class="body">Screeners are sent as private, watermarked links. Tell us who you are and what you’re programming or acquiring.</p>
+      </div>
+      <form class="f js-form" aria-label="Screener request" data-note="note-screener">
+        <div class="field"><label for="s-name">Name</label><input id="s-name" required autocomplete="name"></div>
+        <div class="field"><label for="s-company">Company / Festival</label><input id="s-company" required autocomplete="organization"></div>
+        <div class="field"><label for="s-email">Work email</label><input id="s-email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="s-title">Title</label>
+          <select id="s-title"><option>Road to Recovery</option><option>Building Blocks (short)</option></select>
+        </div>
+        <div class="field wide"><label for="s-msg">Notes</label><textarea id="s-msg" placeholder="Territories, festival section, deadlines"></textarea></div>
+        <div class="field wide"><button class="btn solid" type="submit" style="justify-self:start">Send request</button></div>
+        <p class="form-note" id="note-screener" role="status"></p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div data-view="contact">
+  <section class="pagehead wrap">
+    <h1>Contact</h1>
+    <p>Building Blocks Productions, a California LLC.</p>
+  </section>
+
+  <section class="block wrap" aria-label="Send a message">
+    <div class="split">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h2 class="h-lg">Send a message</h2>
+        <p class="body">We don’t accept unsolicited scripts. Submissions through agents and managers only.</p>
+      </div>
+      <form class="f js-form" aria-label="Contact form" data-note="note-contact">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" required autocomplete="name"></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" required autocomplete="email"></div>
+        <div class="field wide"><label for="c-topic">Topic</label>
+          <select id="c-topic"><option>General</option><option>Press</option><option>Sales &amp; distribution</option><option>Casting / representation</option></select>
+        </div>
+        <div class="field wide"><label for="c-msg">Message</label><textarea id="c-msg" required></textarea></div>
+        <div class="field wide"><button class="btn solid" type="submit" style="justify-self:start">Send</button></div>
+        <p class="form-note" id="note-contact" role="status"></p>
+      </form>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="site wrap">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <a class="brand" href="#home"><span class="blocks" aria-hidden="true"><span></span><span></span><span></span><span></span></span>BUILDING BLOCKS PRODUCTIONS</a>
+    <span style="font-size:14px;color:var(--dim)">Los Angeles</span>
+  </div>
+  <div class="cols">
+    <div>
+      <span class="mono" style="font-size:11px;color:#6E6A66">Films</span>
+      <a href="#survive">Survive: The Game</a>
+      <a href="#road-to-recovery">Road to Recovery</a>
+      <a href="#building-blocks">Building Blocks</a>
+    </div>
+    <div>
+      <span class="mono" style="font-size:11px;color:#6E6A66">Company</span>
+      <a href="#company">About</a>
+      <a href="#press">Press</a>
+      <a href="#industry">Industry</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <span class="mono" style="font-size:11px;color:#6E6A66">Follow</span>
+      <a href="https://www.instagram.com/buildingblocksproductions">Instagram</a>
+      <a href="https://www.youtube.com/@BuildingBlocksProductionsLLC">YouTube</a>
+      <a href="https://letterboxd.com/studio/building-blocks-productions/">Letterboxd</a>
+    </div>
+  </div>
+  <div class="fine">
+    <span>© 2026 Building Blocks Productions LLC. All rights reserved.</span>
+    <span>[Privacy] · [Terms]</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
