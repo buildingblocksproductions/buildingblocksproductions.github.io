@@ -76,8 +76,8 @@
     </div>
   </section>
 
-  <section class="strip" aria-label="Survive: The Game">
-    <p class="mono status live">In production · Supernatural horror</p>
+  <section class="strip" style="align-items:start" aria-label="Survive: The Game">
+    <p class="mono status live" style="grid-column:1/-1">In production · Supernatural horror</p>
     <div class="l">
       <h2 class="h-lg">Survive: The Game</h2>
     </div>
@@ -115,8 +115,8 @@
     </div>
   </section>
 
-  <section class="strip" aria-label="In production">
-    <p class="mono status live">In production · 2027</p>
+  <section class="strip" style="align-items:start" aria-label="In production">
+    <p class="mono status live" style="grid-column:1/-1">In production · 2027</p>
     <div class="l">
       <h2 class="h-lg">Survive: The Game</h2>
     </div>
@@ -419,11 +419,15 @@
         <h2 class="h-lg">Send a message</h2>
         <p class="body">We don’t accept unsolicited scripts. Submissions through agents and managers only.</p>
       </div>
-      <form class="f js-form" aria-label="Contact form" data-note="note-contact">
-        <div class="field"><label for="c-name">Name</label><input id="c-name" required autocomplete="name"></div>
-        <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" required autocomplete="email"></div>
-        <input type="hidden" id="c-topic" value="General">
-        <div class="field wide"><label for="c-msg">Message</label><textarea id="c-msg" required></textarea></div>
+      <form class="f js-form" aria-label="Contact form" data-note="note-contact" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="509d1a05-0b15-4cb7-b0f1-c44e45743c03">
+        <input type="hidden" name="from_name" value="Building Blocks Productions website">
+        <input type="hidden" name="subject" id="c-subject" value="Website inquiry: General">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+        <input type="hidden" id="c-topic" name="topic" value="General">
+        <div class="field wide"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
         <div class="field wide"><button class="btn solid" type="submit" style="justify-self:start">Send</button></div>
         <p class="form-note" id="note-contact" role="status"></p>
       </form>

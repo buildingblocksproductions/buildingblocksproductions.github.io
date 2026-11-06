@@ -54,7 +54,26 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var note = document.getElementById(form.getAttribute('data-note'));
-      if (note) note.textContent = 'Preview only: this form isn’t connected yet, so nothing was sent.';
+      var btn = form.querySelector('button[type=submit]');
+      var topic = document.getElementById('c-topic');
+      var subj = document.getElementById('c-subject');
+      if (topic && subj) subj.value = 'Website inquiry: ' + topic.value;
+      if (note) note.textContent = 'Sending…';
+      if (btn) btn.disabled = true;
+      fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+        .then(function(r){ return r.json().then(function(d){ return { ok: r.ok && d.success, d: d }; }); })
+        .then(function(res){
+          if (res.ok) {
+            form.reset();
+            var m = document.getElementById('c-msg'); if (m) m.removeAttribute('data-auto');
+            if (topic) topic.value = 'General';
+            if (note) note.textContent = 'Thank you. Your message has been sent.';
+          } else {
+            if (note) note.textContent = 'Something went wrong. Please try again in a moment.';
+          }
+        })
+        .catch(function(){ if (note) note.textContent = 'Something went wrong. Please try again in a moment.'; })
+        .then(function(){ if (btn) btn.disabled = false; });
     });
   });
 })();
